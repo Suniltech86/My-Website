@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<style>
+body{background:black;padding:0px; font-family:arial,sanos serif;margin:0px;}
+#pic{text-align:center; margin-top:1px;}
+@keyframes left-right{
+           from{left:1px; top:1px;}
+		   to{left:1300px; top:1px;}
+		   }
+@keyframes right-left{
+           from{left:1300px; top:1px;}
+		   to{left:1px; top:1px;}
+		   }
+#scroll{animation:left-right 10s infinite alternate; margin:100px;font-size;20px;animation-delay:2s; position:relative;}
+img{border-radius:20px;}
+#grid-box{display:grid; grid-template-columns:auto auto; width:500px; grid-gap:90px;
+justify-content:left; margin-left:60px; padding:0px;}
+#flex-box{display:flex; margin:0px; padding:0px; }
+#pic{margin:auto;}
+nav{display:flex;  justify-content:space-evenly; background:red;}
+a{font-size:20px;color:white;text-decoration:none;font-weight:bold;}
+nav ul li{list-style:none;}
+</style>
+</head>
+<body>
+<div id="nav">
+<nav>
+<ul><li><a href="dashboard.html">HOME</li></ul>
+<ul><li><a href="">BLOGS</li></ul>
+<ul><li><a href="">MY CREATION</li></ul>
+<ul><li><a href="">CONTACT</li></ul>
+</nav>
+<span id="scroll">Shopping Blog</span>
+</div>
+<div id="flex-box">
+<div id="grid-box">
+
+
+
+<div >
+<img src="glass.webp" width="200px" height="200px";><br>
+<span style="color:white;">Full Black Frame Black Lens Aviator Sunglasses
+&#8377;700/Piece <s>&#8377;1400</s></span>
+</div>
+
+<div >
+<img src="watch.webp" width="200px" height="200px"; ><br>
+<span style="color:white;">ColorFit Pulse 2 Max
+&#8377;1,499 <s>&#8377;2,999</s>
+</span>
+</div>
+
+<div >
+<img src="shirt.jpeg" width="200px" height="200px";><br>
+<span style="color:white;">Tribal T-Shirts Men's Ride Your Way Biker T-Shirt &#8377;800 <s>&#8377;1500</s></span>
+</div>
+
+<div>
+<img src="shoe1.webp" width="200px" height="200px";><br>
+<span style="color:white;">White Sneaker Shoes For Men
+&#8377;1500/Pair<s>&#8377;2,999</s></span>
+</div>
+</div>
+
+<div id="pic">
+<img src="s4.jpeg" width="600px" height="600px">
+</div>
+</div>
+</body>
+</html>

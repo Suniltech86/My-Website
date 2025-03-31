@@ -1,0 +1,230 @@
+
+
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<title>Registration Form</title>
+<meta name="view port" content="width=device-width,initial-scale=1">
+<style>
+body{background:black;}
+.forms{font-family:arial,sanos serif;  display:flex; justify-content:left; gap:20px; align-items:center;}
+#form1{background:#f4f4f4; padding:40px; box-shadow:0px 0px 10px;text-align:center; width:300px;}
+input{margin-bottom:5px; font-size:20px;}
+button{margin-bottom:20px;background:blue;color:white; font-size:20px; border-radius:20px;}
+#form2{background:#f4f4f4;box-shadow:0px 0px 10px; visibility:hidden; padding:20px;margin-bottom:10px;height:90vh; width:400px;text-align:center;}
+#state{font-size:20px;}
+#city{font-size:20px;}
+h1{color:blue;}
+span{color:red;}
+#form3{background:#f4f4f4;box-shadow:0px 0px 10px; visibility:hidden;padding:30px; }
+#form3 label{font-weight:bold;font-size:20px;}
+#home{dispaly:inline;}
+#home a{font-size:40px;color:white; margin:60px;}
+</style>
+</head>
+<body>
+<div id="home">
+<a href="dashboard.html">Home</a>
+</div>
+<div class="forms">
+
+<div id="form1">
+<form>
+<button id="login">Login</button>&nbsp;&nbsp;&nbsp;<button id="signup">Sign up</button><br>
+<input type="email" id="email" placeholder="Email Id" autofocus required><br><br>
+<input type="password" id="pwd" placeholder="Password" required><br><span id="errrpw" ></span><br>
+<button id="submit1">Login</button>
+</form>
+</div>
+
+<div id="form2">
+<form action="success.html">
+<h1>Sign Up</h1>
+<label>Enter Full Name</label><br><input type="text" id="name" autofocus placeholder="Full Name"><br>
+<span id="errn"></span><br>
+<label>Gender</label><br><input type="radio" name="r"><label>Male</label>
+<input type="radio" name="r"><label>Female</label><br><br>
+<label>Enter Email Id</label><br><input type="email" id="em" placeholder="Email Id"><br><br>
+<label>Enter Password</label><br><input type="password" id="pw" placeholder="Password"><br>
+<span id="errpw"></span><br>
+<label>Enter Phone Number</label><br><input type="text" id="ph" placeholder="Phone Number" maxlength="10"><br>
+<span id="errph"></span><br>
+<label>Enter Your State</label><br>
+<select id="state">
+<option>Select</option>
+<option>AndhraPradesh</option>
+<option>Telangana</option>
+<option>Tamilnadu</option>
+<option>Karnataka</option>
+<option>WestBengal</option>
+<option>Kerala</option>
+<option>Maharastra</option>
+<option>Madhya Pradesh</option>
+<option>Arunachal Pradesh</option>
+<option>Himachal Pradesh</option>
+<option>Assam</option>
+<option>Bihar</option>
+<option>Chhattisgarh</option>
+<option>Goa</option>
+<option>Gujarat</option>
+<option>Haryana</option>
+<option>Jharkhand</option>
+<option>Manipur</option>
+<option>Meghalaya</option>
+<option>Mizoram</option>
+<option>Nagaland</option>
+<option>Odisha</option>
+<option>Uttar Pradesh</option>
+</select><br><br>
+<label>Enter Your City</label><br>
+<select id="city" required>
+<option>Select</option>
+<option>Nandyal</option>
+<option>Kurnool</option>
+<option>Karimnagar</option>
+<option>Hyderabad</option>
+<option>Chennai</option>
+<option>Banglore</option>
+<option>Vizag</option>
+</select><br><br>
+<label>Enter Pincode</label><br>
+<input type="text" id="pi" placeholder="Pincode" maxlength="6"><br>
+<span id="errpi"></span><br><br>
+<button id="submit2">Submit</button>
+</form>
+</div>
+<div id="form3">
+<table>
+<tr><th colspan="2"><h1>Student Registration Form</h1></th></tr>
+<tr><td><label>Roll No:</label></td><td><input type="text" placeholder="Roll No"></td></tr>
+<tr><td><label>Student Name:</label></td><td><input type="text" placeholder="First Name"><input type="text" placeholder="Last Name" style="display:block";></td></tr>
+<tr><td><label>Enter Father Name:</label></td><td><input type="text" placeholder="Father Name"></td></tr>
+<tr><td><label>Date of birth:</label></td><td><input type="date"></td></tr>
+<tr><td><label>Mobile Number</label></td><td><input type="text" placeholder="Mobile Number"></td></tr>
+<tr><td><label>Email Id</label></td><td><input type="email" placeholder="Email Id"></td></tr>
+<tr><td><label>Password</label></td><td><input type="password" placeholder="Password"></td></tr>
+<tr><td><label>Gender</label></td><td><input type="radio" name="r"><label>Male</label><input type="radio" name="r"><label>Female</label></td></tr>
+<tr><td><label>Department</label></td><td><input type="radio" name="c"><label>CSE</label>
+                                          <input type="radio" name="c"><label>IT</label>
+										  <input type="radio" name="c"><label>ECE</label>
+										  <input type="radio" name="c"><label>CIVIL</label>
+										  <input type="radio" name="c"><label>MECH</label>
+										  <input type="radio" name="c"><label>EEE</label></td></tr>
+<tr><td><label>Student Photo:</label></td><td><input type="file"></td></tr>
+<tr><td><label>State:</label></td><td><select id="state">
+<option>Select</option>
+<option>AndhraPradesh</option>
+<option>Telangana</option>
+<option>Tamilnadu</option>
+<option>Karnataka</option>
+<option>WestBengal</option>
+<option>Kerala</option>
+<option>Maharastra</option>
+<option>Madhya Pradesh</option>
+<option>Arunachal Pradesh</option>
+<option>Himachal Pradesh</option>
+<option>Assam</option>
+<option>Bihar</option>
+<option>Chhattisgarh</option>
+<option>Goa</option>
+<option>Gujarat</option>
+<option>Haryana</option>
+<option>Jharkhand</option>
+<option>Manipur</option>
+<option>Meghalaya</option>
+<option>Mizoram</option>
+<option>Nagaland</option>
+<option>Odisha</option>
+<option>Uttar Pradesh</option>
+</select></td></tr>
+<tr><td><label>City:</label></td><td><select id="city" required>
+<option>Select</option>
+<option>Nandyal</option>
+<option>Kurnool</option>
+<option>Karimnagar</option>
+<option>Hyderabad</option>
+<option>Chennai</option>
+<option>Banglore</option>
+<option>Vizag</option>
+</select></td></tr>
+<tr><td><label>Address:</label></td><td><textarea></textarea></td></tr>
+<tr><td colspan="2" style="text-align:center";><button id="register">Register</button>
+</table>
+</div>
+</div>
+</body>
+
+<script>
+f2=document.getElementById("form2").style;
+document.getElementById("signup").onclick=function(){
+                       f2.visibility="visible";
+					  }
+</script>
+<script>					  
+document.getElementById("submit1").onclick=function(form1){
+            const ppwd=document.getElementById("pwd").value;
+                  ppwdexp=/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%&]).{15,25}$/;
+                  if(ppwdexp.test(ppwd)==false)
+                  {
+                   document.getElementById("errrpw").innerText="enter valid password";
+                  form1.preventDefault()
+				  }
+                  else{
+                  document.getElementById("errrpw").innerText="";
+                  }
+          
+
+}
+</script>
+<script>
+document.getElementById("submit2").onclick=function(form2){
+            const   pn=document.getElementById("name").value;
+					pnexp=/^[a-zA-Z ]*$/;
+					if(pnexp.test(pn)==false)
+					{
+					document.getElementById("errn").innerText="enter valid name";
+					form2.preventDefault()
+					}
+					else{
+					document.getElementById("errn").innerText="";
+					}
+			const ppw=document.getElementById("pw").value;
+                  ppwexp=/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%&]).{15,25}$/;
+                  if(ppwexp.test(ppw)==false)
+                  {
+                   document.getElementById("errpw").innerText="enter valid password";
+                  form2.preventDefault()
+				  }
+                  else{
+                  document.getElementById("errpw").innerText="";
+                  }				  
+			const pph=document.getElementById("ph").value;
+                  pphexp=/^[6-9]\d{9}$/;
+                  if(pphexp.test(pph)==false)
+                  {
+                   document.getElementById("errph").innerText="enter valid phone number";
+                  form2.preventDefault()
+                  }
+                  else{
+                   document.getElementById("errph").innerText="";
+                   }				   
+			const ppi=document.getElementById("pi").value;
+                  ppiexp=/^\d{6}$/;
+                  if(ppiexp.test(ppi)==false)
+                  {
+                  document.getElementById("errpi").innerText="enter valid pincide";
+                  form2.preventDefault()
+                  }
+                  else{
+                  document.getElementById("errpi").innerText="";
+                  }				  
+}
+					
+</script>
+<script>
+document.getElementById("submit1").onclick=function(){
+                       document.getElementById("form3").style.visibility="visible";
+					   }
+
+</script>					 
+</html>

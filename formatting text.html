@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="view port" content="width=device-width,initial-scale=1">
+<style>
+body{padding:0px; margin:0px; background:blue;}
+#tb{text-align:center;}
+#ta{ font-size:30px; border:none;}
+textarea{width:90%; height:550px;}
+#f{text-align:center;}
+button{font-size:50px; width:160px;}
+#fs{font-size:40px;}
+input{width:100px; height:50px;}
+nav{background:red; padding:10px; text-align:center; }
+nav a{font-size:30px; color:white;  }
+h1{display:inline; font-size:30px;}
+button{background:green; color:white; border-radius:30px;}
+button:hover{transform:scale(0.9); }
+
+</style>
+</head>
+<body>
+
+<nav>
+<h1>FORMATTING TEXT</h1>
+<a href="dashboard.html">HOME</a>
+</nav><br>
+<div id="tb">
+<textarea id="ta" placeholder="Type here...." autofocus></textarea>
+</div>
+<div id="f">
+<button id="bold"><b>B</b></button>
+<button id="italic"><i>I</i></button>
+<button id="underline"><u>U</u></button>
+<button id="strike"><s>S</s></button>
+<button id="left">Left</button>
+<button id="center">Center</button>
+<button id="right">Right</button>
+<input type="color" id="c">
+<select id="fs">
+<option>Font Size</option>
+<option value="31">31</option>
+<option value="32">32</option>
+<option value="33">33</option>
+<option value="34">34</option>
+<option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+<option value="38">38</option>
+<option value="39">39</option>
+<option value="40">40</option>
+</select>
+</div>
+<script>
+const taa=document.getElementById("ta");
+ document.getElementById("bold").onclick=function(){
+                    if(taa.style.fontWeight=="bold")
+					taa.style.fontWeight="normal";
+					else
+					taa.style.fontWeight="bold";
+					}
+ document.getElementById("italic").onclick=function(){
+                    if(taa.style.fontStyle=="italic")
+					taa.style.fontStyle="normal";
+					else
+					taa.style.fontStyle="italic";
+					}					
+ document.getElementById("underline").onclick=function(){
+                    if(taa.style.textDecoration=="underline")
+					taa.style.textDecoration="none";
+					else
+					taa.style.textDecoration="underline";
+					}
+ document.getElementById("strike").onclick=function(){
+                    if(taa.style.textDecoration=="line-through")
+					taa.style.textDecoration="none";
+					else
+					taa.style.textDecoration="line-through";
+					}					
+ document.getElementById("left").onclick=function(){
+                    ta.style.textAlign="left";
+}
+document.getElementById("center").onclick=function(){
+                    ta.style.textAlign="center";
+}
+document.getElementById("right").onclick=function(){
+                    ta.style.textAlign="right";
+}					
+document.getElementById("c").onchange=function(){
+                    ta.style.color=c.value;
+					}
+document.getElementById("fs").onchange=function(){
+                    ta.style.fontSize=`${document.getElementById("fs").value}px`;
+}					
+					
+</script>
+</body>
+</html>
