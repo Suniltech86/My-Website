@@ -2,21 +2,29 @@
 <html lang="eng">
 <head>
 <style>
-body{padding:0px; font-family:arial,sanos serif;margin:0px; background:black; box-sizing:border-box;}
+body{background:black;padding:0px; font-family:arial,sanos serif; box-sizing:border-box;}
 #pic{text-align:center; margin-top:1px;}
 @keyframes left-right{
            from{left:1px; top:1px;}
 		   to{left:1000px; top:1px;}
 		   }
-#scroll{animation:left-right 10s infinite alternate; margin:100px;font-size;20px;animation-delay:2s; position:relative;}
+@keyframes zoom{
+           from{transform:scale(0.8);}
+		   to{transform:scale(1);}
+		   }
+#i1{animation:zoom ease 5s infinite alternate;}		   
+#pic{animation:zoom ease 6s infinite alternate;}		   
+
+#scroll{animation:left-right 10s infinite alternate;  margin:100px;font-size;20px;animation-delay:2s; color:white; position:relative;}
 img{border-radius:20px;}
 #grid-box{display:grid; grid-template-columns:auto auto; width:500px; grid-gap:90px;
 justify-content:left; margin-left:60px; padding:0px;}
 #flex-box{display:flex; margin:0px; background:green; padding:0px; }
 #pic{margin:auto;}
-nav{display:flex;  justify-content:space-evenly; background:red;}
+nav{display:flex;  align-items:center;justify-content:space-evenly; background:red;}
 a{font-size:20px;color:white;text-decoration:none;font-weight:bold;}
 nav ul li{list-style:none;}
+
 
 </style>
 </head>
@@ -28,35 +36,35 @@ nav ul li{list-style:none;}
 <ul><li><a href="">MY CREATION</li></ul>
 <ul><li><a href="">CONTACT</li></ul>
 </nav>
-<div id="scrolling">	
+<div id="scrolling">
 <span id="scroll">Shopping Blog</span>
 </div>
-</div>	
+</div>
 <div id="flex-box">
 <div id="grid-box">
 
 
 
-<div >
+<div id="i1">
 <img src="glass.webp" width="200px" height="200px";><br>
 <span style="color:white;">Full Black Frame Black Lens Aviator Sunglasses
 &#8377;700/Piece <s>&#8377;1400</s></span>
 </div>
 
-<div >
+<div id="i1">
 <img src="watch.webp" width="200px" height="200px"; ><br>
 <span style="color:white;">ColorFit Pulse 2 Max
 &#8377;1,499 <s>&#8377;2,999</s>
 </span>
 </div>
 
-<div >
+<div id="i1">
 <img src="shirt.jpeg" width="200px" height="200px";><br>
 <span style="color:white;">Tribal T-Shirts Men's Ride Your Way Biker T-Shirt &#8377;800 <s>&#8377;1500</s></span>
 </div>
 
-<div>
-<img src="shoe1.webp" width="200px" height="200px";><br>
+<div id="i1">
+<img src="shoe1.webp" width="200px" height="200px"; ><br>
 <span style="color:white;">White Sneaker Shoes For Men
 &#8377;1500/Pair<s>&#8377;2,999</s></span>
 </div>
