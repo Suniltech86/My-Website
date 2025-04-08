@@ -1,84 +1,302 @@
-
 <!DOCTYPE html>
 <html lang="eng">
 <head>
-<title>My Portfolio</title>
-<meta charset="UTF-8">
-<meta name="view port" content="width=device-width,initial-scale=1">
-<style>
-body{font-family:arial,sans-serif; background:black; padding:0px; margin:0px;}
-nav ul{display:flex;justify-content:right; gap:30px; background:red;}
-nav ul{list-style:none; margin:0px; padding:0px;}
-nav ul li a{text-decoration:none; color:white; font-size:30px; display:block;}
-nav ul ul{display:none; position:absolute;}
-nav ul li:hover>ul{display:block;}
-nav ul li ul li a{display:block; font-size:20px; width:150px; text-align:center; background:yellow; color:black;}
-nav ul li ul li a:hover{background:white;}
-h1{background:linear-gradient(to left ,green,white); padding:10px; margin:0px; font-size:40px;}
-.section{display:flex; padding:10px; gap:10px;margin-left:20px; justify-content:space-between;}
-#img{ width:500px;border-radius:20px; height:600px; text-align:center;}
-img{width:450px; height:500px; padding:30px; box-shadow:0px 0px 10px; transition:0.2;}
-#content{width:100%; height:450px; padding:50px; background:linear-gradient(white,green); box-shadow:0px 0px 10px; }
-#content:hover{background:linear-gradient(green,white);}
-p{text-align:justify;font-weight:bold; font-size:20px;}
-h2{font-size:30px;}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunil | Web Designer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      background: #f4f6f8;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: #3498db;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 1rem;
+    }
+	
+    .navbar {
+      background: linear-gradient(to right, blue,green);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    
+	}
+	
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links li {
+      position: relative;
+    }
+    .nav-links a {
+      color: #fff;
+      font-weight: 500;
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background: #34495e;
+      top: 100%;
+      left: 0;
+      min-width: 160px;
+      border-radius: 5px;
+    }
+    .dropdown-menu li {
+      border-bottom: 1px solid #2c3e50;
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .menu-toggle {
+      display: none;
+    }
+    .menu-icon {
+      display: none;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+    }
+
+   .hero {
+      background: linear-gradient(to right, green,blue);
+      color: #fff;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero-content {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .hero-img {
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      border: 4px solid #1abc9c;
+    }
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+    .btn{
+      margin-top: 1.5rem;
+      background: red;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+	}
+    section {
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #2c3e50;
+    }
+    .grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+	.card{
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .card1 {
+	animation:background 2s infinite alternate;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+	.card1>a{color:red;}
+	@keyframes background{
+	           from{background:linear-gradient(to right,white,green);}
+	           to{background:linear-gradient(to right,green,white);}
+			   }	
+    .bg-light {
+      background: #ecf0f1;
+    }
+
+   .contact a {
+      color: #2c3e50;
+      font-weight: 500;
+    }
+
+    .footer {
+      background: #2c3e50;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #2c3e50;
+      }
+      .menu-toggle:checked ~ .nav-links {
+        display: flex;
+      }
+      .dropdown-menu {
+        position: static;
+        background: #3b4a58;
+      }
+    }
+  </style>
 </head>
 <body>
-<nav>
-<h1>P O R T F O L I O</h1>
-<ul><li><a href="">HOME</a>
-       <ul><li><a href="">***</a></li>
-	       <li><a href="">***</a></li>
-	       <li><a href="">***</a></li>
-	       <li><a href="">***</a></li>
-	   </ul>
-    </li>
-    <li><a href="">ABOUT</a>
-       <ul><li><a href="">***</a></li>
-           <li><a href="">***</a></li>	   
-           <li><a href="">***</a></li>	   
-           <li><a href="">***</a></li>
-       </ul>
-    </li>
-	<li><a href="">BLOG</a>
-       <ul><li><a href="blog1.html">Shopping Blog</a></li>
-           <li><a href="products.html">Products Blog</a></li>	   
-           <li><a href="">***</a></li>	   
-           <li><a href="">***</a></li>
-       </ul>
-    </li>
-	<li><a href="">PROJECTS</a>
-       <ul><li><a href="formatting text.html">Formatting Text</a></li>
-           <li><a href="form.html">Signup Form</a></li>	   
-           <li><a href="">***</a></li>	   
-           <li><a href="">***</a></li>
-       </ul>
-    </li>
-	<li><a href="">CONTACT</a>
-       <ul><li><a href="">***</a></li>
-           <li><a href="">***</a></li>	   
-           <li><a href="">***</a></li>	   
-           <li><a href="">***</a></li>
-       </ul>
-    </li>
-</ul>	
-</nav>
-<div class="section">
-<div id="img">
+<nav class="navbar">
+    <div class="container">
+      <div class="logo">PORTFOLIO</div>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="#">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">About ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">My Story</a></li>
+            <li><a href="#">Skills</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Blog ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="blog1.html">Shopping Blog</a></li>
+            <li><a href="#">Tutorials</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Projects ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Mini Projects</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Contact ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Email</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <section class="hero">
+    <div class="hero-content">
+      <img src="s.jpeg" alt="Sunil" class="hero-img" />
+      <div>
+        <h1>Hii, I'm <span>Sunil Kumar</span></h1>
+        <p>Professional Web Designer & Front-End Developer</p><br>
+        <a href="#projects" class="btn">View My Work</a>
+      </div>
+    </div>
+  </section>
+  <section class="bg-light">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p>I design beautiful, user-friendly websites and turn ideas into digital reality with HTML, CSS, and JavaScript.</p>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <h2 class="section-title">What I Do</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Web Design</h3>
+          <p>Responsive and clean UI for all screen sizes.</p>
+        </div>
+        <div class="card">
+          <h3>UI/UX</h3>
+          <p>Human-centered design with emphasis on usability.</p>
+        </div>
+        <div class="card">
+          <h3>Front-End Dev</h3>
+          <p>Writing scalable and maintainable code.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-light" id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="grid">
+        <div class="card1">
+          <a href="blog1.html"><h3>Shopping Blog</h3>
+          <p>My personal showcase built with modern tools.</p></a>
+        </div>
+        <div class="card1">
+          <a href="formatting text.html"><h3>Formatting Text</h3>
+          <p>Formatting of text based on our requirements.</p></a>
+        </div>
+        <div class="card1">
+          <a href="form.html"><h3>SingIn & SignUp</h3>
+          <p>Signin & signup & Registration form display in the same page.</p></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact">
+    <div class="container">
+      <h2 class="section-title">Let's Work Together</h2>
+      <p>Email: <a href="mailto:sunilmale9160@gmail.com">sunilmale9160@gmail.com</a></p>
+      <p>Find me on LinkedIn and GitHub</p>
+    </div>
+  </section>
+  <footer class="footer">
+    <p>&copy; 2025 Sunil. All Rights Reserved.</p>
+  </footer>
 
-<img src="s.jpeg">
-</div>
-
-<div id="content">
-<h2>HII, I'M SUNIL</h2>
-<p>I'm a beginner web developer with a strong foundation in HTML, CSS, JAVASCRIPT. I've recently
-completed HTML, CSS JAVASCRIPT course, and i'm eager to apply my skills to real-world projects. Through my learning, I've built several small websites and interactive web pages,
-which have helpted me understand the fundamental of web design and development.</P> 
-<p>I'm passionate about front-end development and enjoy crafting clean, responsive designs using HTML and CSS. I also love using Javascript to add interactive features that enhance the user experience. My goal is to continue improving my coding skills and stay up to date with the latest trends and technilogies in web development.   </p>
-<p>Outside of coding, I'm always exploring new challenges to push my limits and expand my knowledge. I enjoy learning about UI/UX design and how it can improve user interaction with websited.</p>
-<p>I'm excited to connect with others in the industry, collaborate on projects, and grow as a developer. Feel free to reach out if you'd like to discuss opportunities or share any tips!.</p>
-</div>
-</div>
 </body>
 </html>
