@@ -2,8 +2,21 @@
 <html lang="eng">
 <head>
 <style>
-body{background:black;padding:0px; font-family:arial,sanos serif; box-sizing:border-box;}
-#pic{text-align:center; margin-top:1px;}
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+body{
+    background:black;
+	padding:0px; 
+	font-family: 'Inter', sans-serif; 
+	box-sizing:border-box;
+	}
+#pic{
+    text-align:center; 
+	margin-top:1px;
+	}
 @keyframes left-right{
            from{left:1px; top:1px;}
 		   to{left:1000px; top:1px;}
@@ -12,17 +25,50 @@ body{background:black;padding:0px; font-family:arial,sanos serif; box-sizing:bor
            from{transform:scale(0.8);}
 		   to{transform:scale(1);}
 		   }
-#i1{animation:zoom ease 5s infinite alternate;}		   
-#pic{animation:zoom ease 6s infinite alternate;}		   
+#i1{
+    animation:zoom ease 5s infinite alternate;
+	}		   
 
-#scroll{animation:left-right 10s infinite alternate;  margin:100px;font-size;20px;animation-delay:2s; color:white; position:relative;}
-img{border-radius:20px;}
-#grid-box{display:grid; grid-template-columns:auto auto; width:500px; grid-gap:90px;
-justify-content:left; margin-left:60px; padding:0px;}
-#flex-box{display:flex; margin:0px; background:green; padding:0px; }
-#pic{margin:auto;}
-nav{display:flex;  align-items:center;justify-content:space-evenly; background:red;}
-a{font-size:20px;color:white;text-decoration:none;font-weight:bold;}
+#scroll{
+    animation:left-right 10s infinite alternate;  
+	margin:100px;
+	font-size:20px;
+	animation-delay:2s; 
+	color:white; 
+	position:relative;}
+img{
+    border-radius:20px;
+	}
+#grid-box{
+    display:grid; 
+	grid-template-columns:auto auto; 
+	width:500px; 
+	grid-gap:90px;
+    justify-content:left; 
+	margin-left:60px; 
+	padding:0px;
+	}
+#flex-box{
+   display:flex; 
+   margin:0px; 
+   background:green; 
+   padding:0px; 
+   }
+#pic{ 
+   margin:auto;
+   }
+nav{
+  display:flex;  
+  align-items:center;
+  justify-content:space-evenly; 
+  background:red;
+  }
+a{
+   font-size:20px;
+   color:white;
+   text-decoration:none;
+   font-weight:bold;
+   }
 nav ul li{list-style:none;}
 
 
@@ -31,10 +77,10 @@ nav ul li{list-style:none;}
 <body>
 <div id="nav">
 <nav>
-<ul><li><a href="index.html">HOME</li></ul>
-<ul><li><a href="">BLOGS</li></ul>
-<ul><li><a href="">MY CREATION</li></ul>
-<ul><li><a href="">CONTACT</li></ul>
+    <ul><li><a href="index.html">HOME</li></ul>
+    <ul><li><a href="">BLOGS</li></ul>
+    <ul><li><a href="">MY CREATION</li></ul>
+    <ul><li><a href="">CONTACT</li></ul>
 </nav>
 <div id="scrolling">
 <span id="scroll">Shopping Blog</span>
