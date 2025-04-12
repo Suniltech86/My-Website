@@ -127,12 +127,16 @@
       margin-top: 1rem;
       font-size: 1.2rem;
     }
-    .btn{
+    .btn{animation:zoom 2s infinite alternate;
       margin-top: 1.5rem;
       background: red;
       color: #fff;
       padding: 0.8rem 1.5rem;
       border-radius: 5px;
+	}
+	  @keyframes zoom{
+	           from{font-size:10px;}
+	           to{font-size:15px;}
 	}
     section {
       padding: 4rem 1rem;
