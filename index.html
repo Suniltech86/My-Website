@@ -27,6 +27,7 @@
     }
 	
     .navbar {
+	animation:bg2 2s infinite alternate;    
       background: linear-gradient(to right, blue,green);
       padding: 1rem;
       position: sticky;
@@ -34,6 +35,12 @@
       z-index: 1000;
     
 	}
+	  @keyframes bg2{
+	          from{background:linear-gradient(to right,blue,green);}
+	          to{background:linear-gradient(to right,green,blue);}
+			  }
+
+
     .navbar ul{
        list-style:none;
     }
@@ -84,7 +91,7 @@
       cursor: pointer;
     }
 
-   .hero {
+   .hero {animation:bg1 2s infinite alternate;
       background: linear-gradient(to right, green,blue);
       color: #fff;
       min-height: 90vh;
@@ -94,6 +101,11 @@
       text-align: center;
       padding: 2rem;
     }
+@keyframes bg1{
+	          from{background:linear-gradient(to right, green,blue);}
+	          to{background:linear-gradient(to right, blue,green);}
+			  }
+	  
     .hero-content {
       display: flex;
       align-items: center;
